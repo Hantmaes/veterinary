@@ -27,9 +27,9 @@ class AnimalController extends Controller
 
     public function create()
     {
-        $publisher = new Publisher;
+        $animal = new Animal;
 
-        return view('publishers.edit', compact('publisher'));
+        return view('animals.edit', compact('animal'));
 
     }
 
@@ -37,22 +37,30 @@ class AnimalController extends Controller
     {
         //validates the request
         $this->validate($request, [
-            'title' => 'required',
+            'name' => 'required',
+            'breed' => 'required',
+            'age' => 'required',
+            'weight' => 'required',
         ]);
 
         //prepare empty object
-        $publisher = new Publisher;
-
+        $animal = new Animal;
+        
+        $owner =Owner::where(`first_name`." ".`surname`, $request->input('owner'));
         //fill the object from request
-        $publisher->title = $request->input('title');
-
+        $animal->name = $request->input('name');
+        $animal->owner_id = $owner;
+        $animal->breed = $request->input('breed');
+        $animal->age = $request->input('age');
+        $animal->weight = $request->input('weight');
+        $animal->specie_id = 1;
         //save the object
-        $publisher->save();
+        $animal->save();
 
         //flash success message (provide it to the next request)
         session()->flash('success_message', 'The comment was successfully saved!');
 
-        return redirect()->route('publishers.edit', [$publisher->id]);
+        return redirect()->route('animals.edit', [$animal->id]);
     }
 
     public function edit($id)
@@ -66,20 +74,25 @@ class AnimalController extends Controller
     {
         //validates the request
         $this->validate($request, [
-            'title' => 'required',
+            'name' => 'required',
+            'breed' => 'required',
+            'age' => 'required',
+            'weight' => 'required',
         ]);
-        //get the object to be updated from database
-        $publisher = Publisher::findOrFail($id);
+        $animal = Animal::findOrFail($id);
 
-        //fill the object from request
-        $publisher->title = $request->input('title');
+        $animal->name = $request->input('name');
+        $animal->breed = $request->input('breed');
+        $animal->age = $request->input('age');
+        $animal->weight = $request->input('weight');
+        $animal->specie_id = 1;
 
         //save the object
-        $publisher->save();
+        $animal->save();
 
         //flash success message (provide it to the next request)
         session()->flash('success_message', 'The comment was successfully saved!');
 
-        return redirect()->route('publishers.edit', [$publisher->id]);
+        return redirect()->route('animals.edit', [$animal->id]);
     }
 }

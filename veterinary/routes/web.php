@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layout/layout');
+    return view('layouts/layout');
 });
 
 
@@ -40,4 +40,4 @@ Route::get('/animals/{animal_id}', 'AnimalController@show')->where('animal_id', 
 Route::get('/animals/create',         'AnimalController@create')->name('animals.create');
 Route::post('/animals',               'AnimalController@store')->name('animals.store');
 Route::get('/animals/{animal_id}/edit', 'AnimalController@edit')->name('animals.edit');
-Route::post('/animals/{animal_id}',     'AnimalController@update')->name('animals.update');
+Route::put('/animals/{animal_id}',     'AnimalController@update')->name('animals.update');

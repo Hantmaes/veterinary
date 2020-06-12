@@ -95,15 +95,46 @@ nav a {
 .edit_pet {
   width: 40%;
   background-color: #e7c598;
-  margin-top: 5rem;
-  padding: 4rem 2rem;
+  margin: 5rem;
+  padding: 2rem 2rem 4rem;
   border-radius: 10px;
   box-shadow: #3f3f3f 0px 8px 25px;
 }
 
+.edit_pet h1 {
+  color: indianred;
+}
+
 input {
   border: none;
-  padding: 0.3rem 0.8rem;
+  width: 55%;
+  padding: 0.6rem 0.8rem;
   border-radius: 10px;
+  margin-top: 0.4rem;
+}
+
+label {
+  color: #313030;
+}
+
+.button {
+  border: none;
+  background-color: lightsalmon;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+
+.alert.alert-success {
+  color: green;
+}
+
+.alert.alert-danger {
+  color: red;
+}
+
+li {
+  list-style: none;
 }
 
