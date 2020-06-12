@@ -20,24 +20,24 @@ Route::get('/', function () {
 
 //Owner routes
 
-Route::get('/owners', 'OwnerController@index')->name('owners.index');
-Route::get('/owners', 'OwnerController@search')->name('owners.search');
+// Route::get('/owners', 'OwnerController@index')->name('owners.index');
+// Route::get('/owners', 'OwnerController@search')->name('owners.search');
 
-Route::get('/owners/{owner_id}', 'OwnerController@show')->where('owner_id', '[0-9]+');
+// Route::get('/owners/{owner_id}', 'OwnerController@show')->where('owner_id', '[0-9]+');
 
-Route::get('/owners/create',         'OwnerController@create')->name('owners.create');
-Route::post('/owners',               'OwnerController@store')->name('owners.store');
-Route::get('/owners/{owner_id}/edit', 'OwnerController@edit')->name('owners.edit');
-Route::post('/owners/{owner_id}',     'OwnerController@update')->name('owners.update');
+// Route::get('/owners/create',         'OwnerController@create')->name('owners.create');
+// Route::post('/owners',               'OwnerController@store')->name('owners.store');
+// Route::get('/owners/{owner_id}/edit', 'OwnerController@edit')->name('owners.edit');
+// Route::post('/owners/{owner_id}',     'OwnerController@update')->name('owners.update');
 
 //Animal routes
 
-Route::get('/animal', 'OwnerController@index')->name('animal.index');
-Route::get('/animal', 'OwnerController@search')->name('animal.search');
+Route::get('/animals', 'AnimalController@index')->name('animals.index');
+Route::get('/animals/search', 'AnimalController@search')->name('animals.search');
 
-Route::get('/animal/{owner_id}', 'OwnerController@show')->where('owner_id', '[0-9]+');
+Route::get('/animals/{animal_id}', 'AnimalController@show')->where('animal_id', '[0-9]+');
 
-Route::get('/animal/create',         'OwnerController@create')->name('animal.create');
-Route::post('/animal',               'OwnerController@store')->name('animal.store');
-Route::get('/animal/{owner_id}/edit', 'OwnerController@edit')->name('animal.edit');
-Route::post('/animal/{owner_id}',     'OwnerController@update')->name('animal.update');
+Route::get('/animals/create',         'AnimalController@create')->name('animals.create');
+Route::post('/animals',               'AnimalController@store')->name('animals.store');
+Route::get('/animals/{animal_id}/edit', 'AnimalController@edit')->name('animals.edit');
+Route::post('/animals/{animal_id}',     'AnimalController@update')->name('animals.update');
