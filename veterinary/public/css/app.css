@@ -27,4 +27,86 @@ nav a {
   font-size: 1.2rem;
   text-transform: uppercase;
 }
+
+.container_pets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+}
+
+.pets_div {
+  width: 27%;
+  background-color: #e7c598;
+  margin-bottom: 4rem;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: #3f3f3f 0px 8px 25px;
+}
+.pets_div .pet_info {
+  text-align: left;
+  padding-left: 4rem;
+  font-size: 1.1rem;
+}
+.pets_div h2 {
+  color: mediumblue;
+}
+.pets_div .img {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pets_div .img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.pets_div button {
+  border: none;
+  background-color: lightsalmon;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+.pets_div h3 a {
+  text-decoration: none;
+  color: #9c5c43;
+}
+
+.container_pet {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+}
+
+.pet {
+  width: 100%;
+}
+
+.edit_pet {
+  width: 40%;
+  background-color: #e7c598;
+  margin-top: 5rem;
+  padding: 4rem 2rem;
+  border-radius: 10px;
+  box-shadow: #3f3f3f 0px 8px 25px;
+}
+
+input {
+  border: none;
+  padding: 0.3rem 0.8rem;
+  border-radius: 10px;
+}
+
+input[type=submit] {
+  border: none;
+  background-color: lightsalmon;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
 /*# sourceMappingURL=app.css.map*/

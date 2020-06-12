@@ -1,53 +1,21 @@
-@extends('layouts.layout', [
-    'title' => 'List of ownerss'
-])  {{--se reemplaza el contenido--}}
+@extends('layouts.layout', ['title' => 'Owners'])
 
+@section ('content')
 
-
-@section('content')
-    
-<h1>Owners Index</h1>
-
-    @foreach($owners as $o)
-
-    {{--<a href="{{ route('publishers.edit'), $p->id }}">Edit this publisher</a>--}}
-
-        <div>
-            <h2>{{ $o->first_name }}</h2>
-            <ul>
-                @foreach($o->owners as $owner)
-                    <li>{{$owner->firt_name}}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endforeach
-            {{--
-            <ul>
-                @foreach($p->books as $b)
-                    <li>{{$o->firt_name}}</li>
-                @endforeach
-            </ul>
-    
-            --}}
-
-            {{--
-            @endcomponent
-
-
-            <a href="publishers/{{ $p->id }}">Read more...</a>
-        </div>
---}}
-{{--
-    @endforeach
-
-    @component('publishers.unordered-list', [
-        'what' => 'whatever'
-    ])
-        ANYTHING ELSE, WRAPPED IN THE COMPONENT
-    @endcomponent
-
-    --}}
+<div class="container_owners">
+@foreach ($owners as $owner)
+    <div class="owners_div">
+        <h2>{{ $owner->first_name . " " . $owner->surname }}</h2>  
+        <a href="/owners/{{ $owner->id }}"><button>Details</button></a>
+    </div>  
+@endforeach
+</div>
 
 @endsection
 
-{{----}}
+{{--    <div class="owner_info">
+        </div>
+        <div class="img"><img src="/images/{{ $animal->photo}}" alt="Dogo"></div>
+        <h3>Owner: <a href="/owners/{{$animal->owner->id}}"> {{$animal->owner->first_name." ".$animal->owner->surname}} </a></h3>
+        
+        --}}
