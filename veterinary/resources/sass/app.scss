@@ -98,3 +98,12 @@ input {
     padding: 0.3rem 0.8rem;
     border-radius: 10px;
 }
+
+input[type="submit"] {
+    border: none;
+    background-color: lightsalmon;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
