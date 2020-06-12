@@ -14,7 +14,11 @@ class CreateDoctorSpieceTable extends Migration
     public function up()
     {
         Schema::create('doctor_spiece', function (Blueprint $table) {
-            $table->id();
+            
+            $table->unsignedInteger('doctor_id');
+            $table->unsignedInteger('spiece_id');
+
+            $table->unique('doctor_id', 'spiece_id');
             $table->timestamps();
         });
     }
