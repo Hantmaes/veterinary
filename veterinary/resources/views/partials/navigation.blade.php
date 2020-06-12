@@ -1,5 +1,5 @@
 <nav>
-    <a href="#">Owners</a>
+    <a href="{{ route('owners.index')}}">Owners</a>
 
     <a href="#">Pets</a>
 

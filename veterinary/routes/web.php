@@ -21,7 +21,8 @@ Route::get('/', function () {
 //Owner routes
 
 Route::get('/owners', 'OwnerController@index')->name('owners.index');
-Route::get('/owners', 'OwnerController@search')->name('owners.search');
+
+Route::get('/owners/search', 'OwnerController@search')->name('owners.search');
 
 Route::get('/owners/{owner_id}', 'OwnerController@show')->where('owner_id', '[0-9]+');
 
