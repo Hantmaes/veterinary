@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
 <body>
-    <h1 class="title">PetSavers</h1>
+    <a href="/"><h1 class="title">PetSavers</h1><a>
+    
     @include('partials/navigation')
     
     @yield('content')

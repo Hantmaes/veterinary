@@ -20,6 +20,13 @@ body {
     font-size: 4rem;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+nav {
+    margin-left: -2rem;
+}
 nav a {
     text-decoration: none;
     color: lightsalmon;
@@ -61,18 +68,18 @@ nav a {
             max-height: 100%;
         }
     }
-    button {
-        border: none;
-        background-color: lightsalmon;
-        color: white;
-        padding: 0.5rem 1rem;
-        border-radius: 10px;
-        font-size: 1.1rem;
-    }
     h3 a {
         text-decoration: none;
         color: rgb(156, 92, 67);
     }
+}
+button {
+    border: none;
+    background-color: lightsalmon;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
 }
 .container_pet {
     display: flex;
@@ -125,4 +132,55 @@ label {
 
 li {
     list-style: none;
+}
+
+.owner_div {
+    width: 400px;
+    background-color: rgb(231, 197, 152);
+    margin: 5rem;
+    padding: 2rem 2rem 4rem;
+    border-radius: 10px;
+    box-shadow: rgb(63, 63, 63) 0px 8px 25px;
+    h1 {
+        color: indianred;
+    }
+}
+.owners_div {
+    width: 22%;
+    height: 200px;
+    background-color: rgb(231, 197, 152);
+    margin: 1rem;
+    padding: 2rem 2rem 4rem;
+    border-radius: 10px;
+}
+.container_owners {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 3rem;
+}
+.pet_name:hover {
+    color: brown;
+}
+
+.doctor_div {
+    width: 300px;
+
+    background-color: rgb(231, 197, 152);
+    margin: 1rem;
+    padding: 2rem 2rem 4rem;
+    border-radius: 10px;
+    h2 {
+        font-size: 1.8rem;
+        color: rgb(136, 71, 28);
+    }
+    p {
+        font-size: 1.4rem;
+    }
+}
+
+button:hover,
+.button:hover {
+    background-color: rgb(238, 163, 65);
 }

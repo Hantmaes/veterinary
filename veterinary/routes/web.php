@@ -25,13 +25,11 @@ Route::get('/owners', 'OwnerController@index')->name('owners.index');
 Route::get('/owners/search', 'OwnerController@search')->name('owners.search');
 
 Route::get('/owners/{owner_id}', 'OwnerController@show')->where('owner_id', '[0-9]+');
-
-// Route::get('/owners/{owner_id}', 'OwnerController@show')->where('owner_id', '[0-9]+');
-
-// Route::get('/owners/create',         'OwnerController@create')->name('owners.create');
-// Route::post('/owners',               'OwnerController@store')->name('owners.store');
-// Route::get('/owners/{owner_id}/edit', 'OwnerController@edit')->name('owners.edit');
-// Route::post('/owners/{owner_id}',     'OwnerController@update')->name('owners.update');
+Route::get('/owners/{owner_id}/edit', 'OwnerController@edit')->name('owners.edit');
+Route::get('/owners/create',         'OwnerController@create')->name('owners.create');
+Route::post('/owners',               'OwnerController@store')->name('owners.store');
+Route::get('/owners/{owner_id}/edit', 'OwnerController@edit')->name('owners.edit');
+Route::put('/owners/{owner_id}',     'OwnerController@update')->name('owners.update');
 
 //Animal routes
 
@@ -44,3 +42,6 @@ Route::get('/animals/create',         'AnimalController@create')->name('animals.
 Route::post('/animals',               'AnimalController@store')->name('animals.store');
 Route::get('/animals/{animal_id}/edit', 'AnimalController@edit')->name('animals.edit');
 Route::put('/animals/{animal_id}',     'AnimalController@update')->name('animals.update');
+
+
+Route::get('/doctors', 'DoctorController@index')->name('doctors.index');

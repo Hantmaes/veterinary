@@ -3,5 +3,5 @@
 
     <a href="{{ route('animals.index')}}">Pets</a>
 
-    <a href="#">Doctors</a>
+    <a href="{{ route('doctors.index')}}">Doctors</a>
 </nav>
